@@ -23,7 +23,9 @@ https://github.com/user-attachments/assets/b55165ad-018e-415a-9e5d-0163a0aff316
 
 ## Instructions
 
+- Install Eclipse IDE
 - Clone the Repository from GitHub
+  - Go to Eclipse IDE
   - File > Import > Git > Projects from Git.
   - Choose Clone URI and click Next.
   - Paste the URL of the GitHub repository into the URI field and press Next.
