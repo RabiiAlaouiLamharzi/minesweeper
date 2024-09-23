@@ -20,7 +20,7 @@ public class LevelOne {
 
     private static final int ROWS = 12;
     private static final int COLS = 20;
-    private static final int NUM_MINES = 20;
+    private static final int NUM_MINES = 2;
     private Button[][] boardButtons = new Button[ROWS][COLS];
     private boolean[][] mineLocations = new boolean[ROWS][COLS];
     private boolean[][] revealedCells = new boolean[ROWS][COLS];
@@ -37,7 +37,7 @@ public class LevelOne {
     	VBox vbox1 = new VBox(5, score, level);
 
     	// Now, let's display info about mines and cells
-    	Label mines = new Label("🦠 x 25");
+    	Label mines = new Label("🦠 x " + NUM_MINES);
     	Label square = new Label("◼︎︎");
     	square.setStyle("-fx-text-fill: navy; -fx-font-size: 26px; -fx-padding: -11 -1 0 0;");
     	Label cells = new Label("x 125");
