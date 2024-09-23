@@ -11,14 +11,14 @@ https://github.com/user-attachments/assets/b55165ad-018e-415a-9e5d-0163a0aff316
 
 ## Storyboard
 
-- Cell Reveal Interaction
+1. Cell Reveal Interaction
 <img width="1000" alt="Screenshot 2024-09-23 at 12 09 55" src="https://github.com/user-attachments/assets/18a63433-12d8-4faf-a8a8-963081d1736c">
-- Revealing a cell containing toxic waste (mines)
+2. Revealing a cell containing toxic waste (mines)
 <img width="1000" alt="Screenshot 2024-09-23 at 12 12 27" src="https://github.com/user-attachments/assets/259b622f-8e5d-4a1e-9e34-a723776aece7">
-- Drag to select a 3x3 cell area to scan and reveal all hidden toxic waste
+3. Drag to select a 3x3 cell area to scan and reveal all hidden toxic waste
 <img width="1000" alt="Screenshot 2024-09-23 at 12 10 56" src="https://github.com/user-attachments/assets/8bf69b3c-ce7d-4023-8443-60e894a52c68">
 <img width="1000" alt="Screenshot 2024-09-23 at 12 11 17" src="https://github.com/user-attachments/assets/c27c4ba4-38d2-4d28-b52e-b3ec7a6e3190">
-- Double click on a marine animal to reveal information about its endangered status
+4. Double click on a marine animal to reveal information about its endangered status
 <img width="1000" alt="Screenshot 2024-09-23 at 12 11 45" src="https://github.com/user-attachments/assets/947c7790-5e94-486a-a0ed-fdcc2fd3a748">
 
 ## Instructions
