@@ -1,4 +1,4 @@
-# Minesweeper (Figma, JavaFX)
+# OceanRescue (Figma, JavaFX)
 
 By leveraging the popularity and nostalgia behind Minesweeper, the game "OceanRescue" aims to raise awareness about the importance of protecting the ocean and its endangered species. Instead of having a regular square grid with cells and mines, why not have an irregular grid that will represent for example an ocean. You might often click on a cell and stumble upon a "mine", which is in this case toxic waste from factories dumped into the ocean. If a player stumbles upon toxic waste, all marine life in that area dies, and it's game over. This improved version of the Minesweeper consists of 3 levels: easy, medium, and hard. As you progress in the game, you will get bigger oceans (bigger grids), and more toxic waste to make the game harder.
 
