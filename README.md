@@ -42,7 +42,7 @@ https://github.com/user-attachments/assets/b55165ad-018e-415a-9e5d-0163a0aff316
   - Click Apply and Close.
 - Configure JavaFX in the Run Configuration
   - Go to Run > Run Configurations
-  - Select the run configuration for your JavaFX project.
+  - Select the run configuration for your JavaFX project (Menu.java is the main class).
   - In the Arguments tab, in the VM arguments section, add the following:
     ```
     --module-path /path-to-javafx-sdk/lib --add-modules javafx.controls,javafx.fxml
