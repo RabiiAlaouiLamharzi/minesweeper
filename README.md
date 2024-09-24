@@ -2,6 +2,17 @@
 
 By leveraging the popularity and nostalgia behind Minesweeper, the game "OceanRescue" aims to raise awareness about the importance of protecting the ocean and its endangered species. Instead of having a regular square grid with cells and mines, why not have an irregular grid that will represent for example an ocean. You might often click on a cell and stumble upon a "mine", which is in this case toxic waste from factories dumped into the ocean. If a player stumbles upon toxic waste, all marine life in that area dies, and it's game over. This improved version of the Minesweeper consists of 3 levels: easy, medium, and hard. As you progress in the game, you will get bigger oceans (bigger grids), and more toxic waste to make the game harder.
 
+## What has been Done so Far
+
+- Main Menu with basic styling (with a button to start playing level one)
+- “Game Over” Screen with basic styling (and two working buttons to restart level or go to menu)
+- “You Win” Screen with basic styling (and two working buttons to restart the level or go to the menu plus a donate link if you want to help save the ocean)
+- The layout of the minesweeper grid with basic styling (textures and advanced styles to be added in V2)
+- Implemented a board to record scores, time spent in the game, etc (to be improved with a better algorithm to record the score and animals saved)
+- Implemented the two basic functionalities I mentioned in HWK 1
+  - Implemented the cell reveal interaction which uncovers safe areas of the grid (saving marine life) and displays numbers that indicate adjacent mines.
+  - Implemented the case of revealing a mine (toxic waste) which triggers the “Game Over” screen by uncovering all the mines at once.
+  
 ## Demo
 
 https://github.com/user-attachments/assets/b55165ad-018e-415a-9e5d-0163a0aff316
