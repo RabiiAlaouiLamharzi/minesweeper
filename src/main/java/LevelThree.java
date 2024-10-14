@@ -144,7 +144,7 @@ public class LevelThree {
 
     	// Create the game scene
     	Scene gameScene = new Scene(layout, COLS * CELL_SIZE + 30, ROWS * CELL_SIZE + 100);
-    	mainWindow.setTitle("Ocean Rescue - Level 1");
+    	mainWindow.setTitle("Ocean Rescue - Level 3");
     	mainWindow.setScene(gameScene);
     	mainWindow.centerOnScreen();
     	mainWindow.show();
