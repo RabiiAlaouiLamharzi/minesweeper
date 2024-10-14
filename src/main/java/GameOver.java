@@ -12,6 +12,7 @@ public class GameOver {
     public void display() {
 
         Stage gameOverWindow = new Stage();
+        gameOverWindow.setResizable(false);
         gameOverWindow.setTitle("Game Over :(");
 
         // Main game over message
@@ -28,7 +29,10 @@ public class GameOver {
         Button restartButton = new Button("Restart Level");
         Button menuButton = new Button("Main Menu");
 
-        restartButton.setOnAction(e -> restart(gameOverWindow));
+        restartButton.setOnAction(e -> {
+        	gameOverWindow.close(); 
+            new LevelOne().display();  
+        });
         menuButton.setOnAction(e -> menu(gameOverWindow));
         restartButton.setPrefWidth(150);
         menuButton.setPrefWidth(150);
@@ -43,7 +47,7 @@ public class GameOver {
         mainLayout.setAlignment(Pos.CENTER);
 
         // Create the scene and display it
-        Scene scene = new Scene(mainLayout, 20 * 31.5, 12 * 37);
+        Scene scene = new Scene(mainLayout, 20 * 40 + 30, 12 * 40 + 100);
         gameOverWindow.setScene(scene);
         gameOverWindow.show();
     }
@@ -55,10 +59,4 @@ public class GameOver {
         menuWindow.display();
     }
 
-    // Restarts the game by closing the current window and re-launching LevelOne
-    public void restart(Stage currentStage) {
-        currentStage.close();
-        LevelOne levelWindow = new LevelOne();
-        levelWindow.display();
-    }
 }

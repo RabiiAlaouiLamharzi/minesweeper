@@ -17,6 +17,7 @@ public class GameWon {
     public void display() {
 
         Stage celebrationWindow = new Stage();
+        celebrationWindow.setResizable(false);
         celebrationWindow.setTitle("Congratulations!");
 
         // Main winning message
@@ -36,7 +37,10 @@ public class GameWon {
         Button restartButton = new Button("Restart Level");
         Button menuButton = new Button("Main Menu");
 
-        restartButton.setOnAction(e -> restart(celebrationWindow));
+        restartButton.setOnAction(e -> {
+        	celebrationWindow.close(); 
+            new LevelOne().display();  
+        });
         menuButton.setOnAction(e -> menu(celebrationWindow));
         restartButton.setPrefWidth(150);
         menuButton.setPrefWidth(150);
@@ -51,7 +55,7 @@ public class GameWon {
         mainLayout.setAlignment(Pos.CENTER);
 
         // Create the scene and display it
-        Scene scene = new Scene(mainLayout, 20 * 31.5, 12 * 37);
+        Scene scene = new Scene(mainLayout, 20 * 40 + 30, 12 * 40 + 100);
         celebrationWindow.setScene(scene);
         celebrationWindow.show();
     }
@@ -61,13 +65,6 @@ public class GameWon {
         currentStage.close();
         Menu menuWindow = new Menu();
         menuWindow.display();
-    }
-
-    // Restarts the game by closing the current window and re-launching LevelOne
-    public void restart(Stage currentStage) {
-        currentStage.close();
-        LevelOne levelWindow = new LevelOne();
-        levelWindow.display();
     }
 
     // Opening the donation link in a web browser

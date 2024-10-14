@@ -7,24 +7,28 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class Menu extends Application {
+	
 
     @Override
     public void start(Stage mainStage) {
         StackPane menuLayout = createMenuLayout(mainStage);
+        mainStage.setResizable(false);
         mainStage.setTitle("Ocean Rescue");
-        mainStage.setScene(new Scene(menuLayout, 20 * 31.5, 12 * 37));
+        mainStage.setScene(new Scene(menuLayout, 20 * 40 + 30, 12 * 40 + 100));
         mainStage.show();
     }
 
     private StackPane createMenuLayout(Stage mainStage) {
+        
         // Set the background image
         Image backgroundImage = new Image("https://iili.io/dsfTku9.jpg");
         ImageView background = new ImageView(backgroundImage);
-        background.setFitWidth(20 * 31.5);
-        background.setFitHeight(12 * 37);
+        background.setFitWidth(20 * 40 + 30);
+        background.setFitHeight(12 * 40 + 100);
         background.setPreserveRatio(false);
 
         // Create the title text
@@ -32,9 +36,9 @@ public class Menu extends Application {
         titleText.setStyle("-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 64px;");
 
         // Create buttons for each level
-        Button level1Button = createButton("Level 1", mainStage);
-        Button level2Button = createButton("Level 2", null);
-        Button level3Button = createButton("Level 3", null);
+        Button level1Button = createButton1("Level 1", mainStage);
+        Button level2Button = createButton2("Level 2", mainStage);
+        Button level3Button = createButton3("Level 3", mainStage);
 
         // Add margins for the buttons
         HBox.setMargin(level1Button, new Insets(0, 0, 30, 0));
@@ -53,27 +57,94 @@ public class Menu extends Application {
         return rootLayout;
     }
 
-    private Button createButton(String label, Stage targetStage) {
+    private Button createButton1(String label, Stage targetStage) {
+    	
+        Font customFont = Font.loadFont(getClass().getResourceAsStream("/fonts/Segoe UI Bold.ttf"), 20);
+    	
         Button button = new Button(label);
-        button.setStyle("-fx-font-weight: bold; -fx-font-size: 20px;");
-        button.setPrefWidth(150);
-        button.setPrefHeight(40);
+        button.setFont(customFont);
+        
+        button.setStyle(
+        	    "-fx-padding: 10px 50px; " +  
+        	    "-fx-background-radius: 50px; " +  
+        	    "-fx-border-radius: 100%;"
+        	);
 
         // Disable the button if it has no associated action
         if (targetStage == null) {
             button.setDisable(true);
         } else {
-            button.setOnAction(event -> startLevel(targetStage));
+            button.setOnAction(event -> startLevel1(targetStage));
         }
 
         return button;
     }
 
     // Switches from the menu to LevelOne (game window)
-    private void startLevel(Stage mainStage) {
+    private void startLevel1(Stage mainStage) {
         mainStage.close();
         LevelOne newLevel = new LevelOne();
-        newLevel.display();
+        newLevel.display1();
+    }
+    
+    private Button createButton2(String label, Stage targetStage) {
+    	
+        Font customFont = Font.loadFont(getClass().getResourceAsStream("/fonts/Segoe UI Bold.ttf"), 20);
+    	
+        Button button = new Button(label);
+        button.setFont(customFont);
+        
+        button.setStyle(
+        	    "-fx-padding: 10px 50px; " +  
+        	    "-fx-background-radius: 50px; " +  
+        	    "-fx-border-radius: 100%;"
+        	);
+
+        // Disable the button if it has no associated action
+        if (targetStage == null) {
+            button.setDisable(true);
+        } else {
+            button.setOnAction(event -> startLevel2(targetStage));
+        }
+
+        return button;
+    }
+    
+    // Switches from the menu to LevelOne (game window)
+    private void startLevel2(Stage mainStage) {
+        mainStage.close();
+        LevelTwo newLevel = new LevelTwo();
+        newLevel.display1();
+    }
+    
+    private Button createButton3(String label, Stage targetStage) {
+    	
+        Font customFont = Font.loadFont(getClass().getResourceAsStream("/fonts/Segoe UI Bold.ttf"), 20);
+    	
+        Button button = new Button(label);
+        button.setFont(customFont);
+        
+        button.setStyle(
+        	    "-fx-padding: 10px 50px; " +  
+        	    "-fx-background-radius: 50px; " +  
+        	    "-fx-border-radius: 100%;"
+        	);
+
+        // Disable the button if it has no associated action
+        if (targetStage == null) {
+            button.setDisable(true);
+        } else {
+            button.setOnAction(event -> startLevel3(targetStage));
+        }
+
+        return button;
+    }
+    
+    // Switches from the menu to LevelOne (game window)
+    private void startLevel3(Stage mainStage) {
+        mainStage.close();
+        LevelThree newLevel = new LevelThree();
+        newLevel.display1();
     }
     
     public void display() {
