@@ -37,7 +37,7 @@ public class LevelOne {
 
     private static final int ROWS = 12;
     private static final int COLS = 20;
-    private static final int NUM_MINES = 5;
+    private static final int NUM_MINES = 1;
     private Button[][] boardButtons = new Button[ROWS][COLS];
     private boolean[][] mineLocations = new boolean[ROWS][COLS];
     private boolean[][] revealedCells = new boolean[ROWS][COLS];
@@ -909,7 +909,7 @@ public class LevelOne {
     			public void handle(ActionEvent event) {
     			    primaryStage.close();
     			    LevelTwo newWindow = new LevelTwo();
-    			    newWindow.display();
+    			    newWindow.display2();
     			}
     		});
             pause.play();

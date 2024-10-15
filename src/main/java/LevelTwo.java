@@ -51,7 +51,7 @@ public class LevelTwo {
     private Stage hintPopup;
     private Font customFont = Font.loadFont(getClass().getResourceAsStream("/fonts/Segoe UI.ttf"), 14);
     
-    public void display1() {
+    public void display2() {
     	// Create the main window and make it non-resizable
     	Stage mainWindow = new Stage();
     	mainWindow.setResizable(false);
@@ -909,7 +909,7 @@ public class LevelTwo {
     			public void handle(ActionEvent event) {
     			    primaryStage.close();
     			    LevelThree newWindow = new LevelThree();
-    			    newWindow.display();
+    			    newWindow.display3();
     			}
     		});
             pause.play();

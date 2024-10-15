@@ -37,7 +37,7 @@ public class LevelThree {
 
     private static final int ROWS = 12;
     private static final int COLS = 20;
-    private static final int NUM_MINES = 15;
+    private static final int NUM_MINES = 1;
     private Button[][] boardButtons = new Button[ROWS][COLS];
     private boolean[][] mineLocations = new boolean[ROWS][COLS];
     private boolean[][] revealedCells = new boolean[ROWS][COLS];
@@ -51,7 +51,7 @@ public class LevelThree {
     private Stage hintPopup;
     private Font customFont = Font.loadFont(getClass().getResourceAsStream("/fonts/Segoe UI.ttf"), 14);
     
-    public void display1() {
+    public void display3() {
     	// Create the main window and make it non-resizable
     	Stage mainWindow = new Stage();
     	mainWindow.setResizable(false);

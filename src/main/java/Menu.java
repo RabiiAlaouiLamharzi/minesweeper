@@ -114,7 +114,7 @@ public class Menu extends Application {
     private void startLevel2(Stage mainStage) {
         mainStage.close();
         LevelTwo newLevel = new LevelTwo();
-        newLevel.display1();
+        newLevel.display2();
     }
     
     private Button createButton3(String label, Stage targetStage) {
@@ -144,7 +144,7 @@ public class Menu extends Application {
     private void startLevel3(Stage mainStage) {
         mainStage.close();
         LevelThree newLevel = new LevelThree();
-        newLevel.display1();
+        newLevel.display3();
     }
     
     public void display() {
